@@ -1,4 +1,14 @@
+#[derive(Debug)]
+enum Message {
+    Quit,
+    Echo,
+    Move,
+    ChangeColor,
+}
+
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+    println!("{:?}", Message::Quit);
+    println!("{:?}", Message::Echo);
+    println!("{:?}", Message::Move);
+    println!("{:?}", Message::ChangeColor);
 }
