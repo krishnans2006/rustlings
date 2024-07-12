@@ -4,6 +4,8 @@
 // `hour_of_day` is higher than 23.
 fn maybe_icecream(hour_of_day: u16) -> Option<u16> {
     // TODO: Complete the function body.
+
+    // Note: The solution uses match in a clever way
     if hour_of_day > 23 {
         Option::None
     } else if hour_of_day >= 22 {
