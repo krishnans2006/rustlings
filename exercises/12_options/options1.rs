@@ -4,6 +4,13 @@
 // `hour_of_day` is higher than 23.
 fn maybe_icecream(hour_of_day: u16) -> Option<u16> {
     // TODO: Complete the function body.
+    if hour_of_day > 23 {
+        Option::None
+    } else if hour_of_day >= 22 {
+        Option::Some(0)
+    } else {
+        Option::Some(5)
+    }
 }
 
 fn main() {
@@ -19,6 +26,8 @@ mod tests {
         // TODO: Fix this test. How do you get the value contained in the
         // Option?
         let icecreams = maybe_icecream(12);
+
+        let icecreams = icecreams.unwrap_or(0);
 
         assert_eq!(icecreams, 5); // Don't change this line.
     }
