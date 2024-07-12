@@ -31,7 +31,21 @@ mod my_module {
         let mut output = Vec::with_capacity(input.len());
 
         for (string, command) in input {
-            output.push(string);
+            output.push(
+                match command {
+                    Command::Uppercase => string.to_uppercase(),
+                    Command::Trim => String::from(string.trim()),
+                    Command::Append(num) => {
+                        let mut addition: String = String::new();
+
+                        for _ in 0..num {
+                            addition.push_str("bar");
+                        }
+
+                        format!("{string}{addition}")
+                    }
+                }
+            )
         }
 
         output
