@@ -30,19 +30,17 @@ mod my_module {
     pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
         let mut output = Vec::with_capacity(input.len());
 
-        for (string, command) in input {
+        for (mut string, command) in input {
             output.push(
                 match command {
                     Command::Uppercase => string.to_uppercase(),
                     Command::Trim => String::from(string.trim()),
                     Command::Append(num) => {
-                        let mut addition: String = String::new();
-
                         for _ in 0..num {
-                            addition.push_str("bar");
+                            string.push_str("bar");
                         }
 
-                        format!("{string}{addition}")
+                        string
                     }
                 }
             )
