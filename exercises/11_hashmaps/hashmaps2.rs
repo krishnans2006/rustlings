@@ -37,6 +37,7 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
 
 fn main() {
     // You can optionally experiment here.
+    fruit_basket(&mut HashMap::from_iter([(Fruit::Apple, 4), (Fruit::Mango, 2), (Fruit::Lychee, 5)]));
 }
 
 #[cfg(test)]

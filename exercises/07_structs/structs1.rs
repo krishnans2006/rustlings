@@ -13,6 +13,9 @@ struct UnitStruct;
 
 fn main() {
     // You can optionally experiment here.
+    ColorRegularStruct { red: 0, green: 0, blue: 0 };
+    ColorTupleStruct(0, 255, 0);
+    UnitStruct;
 }
 
 #[cfg(test)]

@@ -23,6 +23,7 @@ fn create_order_template() -> Order {
 
 fn main() {
     // You can optionally experiment here.
+    create_order_template();
 }
 
 #[cfg(test)]
