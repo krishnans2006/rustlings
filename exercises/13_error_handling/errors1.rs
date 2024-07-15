@@ -15,6 +15,7 @@ fn generate_nametag_text(name: String) -> Result<String, String> {
 
 fn main() {
     // You can optionally experiment here.
+    let _ = generate_nametag_text(String::from("hi"));
 }
 
 #[cfg(test)]
