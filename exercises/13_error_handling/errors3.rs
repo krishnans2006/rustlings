@@ -21,12 +21,12 @@ fn main() -> Result<(), ParseIntError> {
 
     let cost = total_cost(pretend_user_input)?;
 
-    Ok(
-        if cost > tokens {
-            println!("You can't afford that many!");
-        } else {
-            tokens -= cost;
-            println!("You now have {tokens} tokens.");
-        }
-    )
+    if cost > tokens {
+        println!("You can't afford that many!");
+    } else {
+        tokens -= cost;
+        println!("You now have {tokens} tokens.");
+    }
+
+    Ok(())
 }
