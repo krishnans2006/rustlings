@@ -21,13 +21,21 @@ fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
     let cost_per_item = 5;
 
     // TODO: Handle the error case as described above.
-    let qty = item_quantity.parse::<i32>();
+
+    // Note: Why does the below not work??
+    // The error is "expected `i32`, found `Result<_, ParseIntError>`""
+    // let qty = item_quantity.parse::<i32>().unwrap_or_else(|err| {
+    //     return Err(err);
+    // });
+
+    let qty = item_quantity.parse::<i32>()?;
 
     Ok(qty * cost_per_item + processing_fee)
 }
 
 fn main() {
     // You can optionally experiment here.
+    let _ = total_cost("hi");
 }
 
 #[cfg(test)]
