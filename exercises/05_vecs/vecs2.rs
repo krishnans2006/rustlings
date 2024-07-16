@@ -32,6 +32,10 @@ fn vec_map(input: &[i32]) -> Vec<i32> {
 
 fn main() {
     // You can optionally experiment here.
+    let arr = [1, 2, 3];
+    let _ = vec_loop(&arr);
+    let _ = vec_map_example(&arr);
+    let _ = vec_map(&arr);
 }
 
 #[cfg(test)]

@@ -15,6 +15,10 @@ fn replace_me(input: &str) -> String {
 
 fn main() {
     // You can optionally experiment here.
+    let my_str = String::from("hi");
+    let _ = trim_me(&my_str);
+    let _ = compose_me(&my_str);
+    let _ = replace_me(&my_str);
 }
 
 #[cfg(test)]

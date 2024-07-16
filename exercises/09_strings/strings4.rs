@@ -33,4 +33,6 @@ fn main() {
     string("Happy Monday!".replace("Mon", "Tues"));
 
     string("mY sHiFt KeY iS sTiCkY".to_lowercase());
+
+    let _ = placeholder();
 }

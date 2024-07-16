@@ -48,6 +48,8 @@ fn build_scores_table(results: &str) -> HashMap<&str, Team> {
 
 fn main() {
     // You can optionally experiment here.
+    let result_str: &str = "England,France,4,2";
+    let _ = build_scores_table(result_str);
 }
 
 #[cfg(test)]
