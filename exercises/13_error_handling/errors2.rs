@@ -24,6 +24,7 @@ fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
 
     // Note: Why does the below not work??
     // The error is "expected `i32`, found `Result<_, ParseIntError>`""
+    // Answer: the return only returns in the closure, not the parent function!
     // let qty = item_quantity.parse::<i32>().unwrap_or_else(|err| {
     //     return Err(err);
     // });
