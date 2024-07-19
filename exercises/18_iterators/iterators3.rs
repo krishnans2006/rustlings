@@ -34,6 +34,9 @@ fn list_of_results() -> Vec<Result<i32, DivisionError>> {
 
 fn main() {
     // You can optionally experiment here.
+    let _ = divide(2, 1);
+    let _ = result_with_list();
+    let _ = list_of_results();
 }
 
 #[cfg(test)]
