@@ -5,10 +5,10 @@
 // "hello" -> "Hello"
 fn capitalize_first(input: &str) -> String {
     let mut chars = input.chars();
-    (match chars.next() {
+    match chars.next() {
         None => String::new(),
-        Some(first) => first.to_uppercase().collect(),
-    }) + &chars.collect::<String>()
+        Some(first) => first.to_uppercase().to_string() + &chars.collect::<String>(),
+    }
 }
 
 // TODO: Apply the `capitalize_first` function to a slice of string slices.
