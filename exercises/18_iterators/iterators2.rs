@@ -27,6 +27,9 @@ fn capitalize_words_string(words: &[&str]) -> String {
 
 fn main() {
     // You can optionally experiment here.
+    let _ = capitalize_first("hi");
+    let _ = capitalize_words_vector(&["hi", "hello"]);
+    let _ = capitalize_words_string(&["hi", "hello"]);
 }
 
 #[cfg(test)]
