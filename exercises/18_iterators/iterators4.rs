@@ -14,6 +14,7 @@ fn factorial(num: u8) -> u64 {
 
 fn main() {
     // You can optionally experiment here.
+    let _ = factorial(2);
 }
 
 #[cfg(test)]
