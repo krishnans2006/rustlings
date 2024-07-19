@@ -7,6 +7,9 @@ fn factorial(num: u8) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+    
+    // (1..=num).fold(1, |acc, elem| acc * (elem as u64))
+    (1..=num).product::<u8>() as u64
 }
 
 fn main() {
