@@ -54,6 +54,20 @@ fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Pr
 
 fn main() {
     // You can optionally experiment here.
+    let mut map = HashMap::new();
+    map.insert(String::from("variables1"), Progress::Complete);
+    map.insert(String::from("functions1"), Progress::Complete);
+    map.insert(String::from("hashmap1"), Progress::Complete);
+    map.insert(String::from("arc1"), Progress::Some);
+    map.insert(String::from("as_ref_mut"), Progress::None);
+    map.insert(String::from("from_str"), Progress::None);
+
+    let maps = [map.clone()];
+
+    let _ = count_for(&map, Progress::Complete);
+    let _ = count_iterator(&map, Progress::Complete);
+    let _ = count_collection_for(&maps, Progress::Complete);
+    let _ = count_collection_iterator(&maps, Progress::Complete);
 }
 
 #[cfg(test)]
